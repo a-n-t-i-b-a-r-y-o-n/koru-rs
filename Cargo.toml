@@ -1,0 +1,17 @@
+[package]
+name = "koru"
+version = "0.2.0"
+edition = "2021"
+authors = [ "g-r-a-v-i-t-y-w-a-v-e" ]
+
+[dependencies]                                  # Used for:
+async-std = "1.9.0"                             #   Async UDP socket for SSDP
+config = "0.13"                                 #   Config files
+ecp = { path = "../ecp" }                       #   ECP-2 connection
+quick-xml = "0.22.0"                            #   Parsing device endpoint responses (e.g. device-info)
+regex = "1.5.3"                                 #   Parsing SSDP responses
+reqwest = { version = "0.11"}                   #   Crafting HTTP requests for device endpoints
+tokio = { version = "1", features = ["full"] }  #   SSDP request timeouts, async unit tests
+urlencoding = "2.1"                             #   Encoding character literals for remote key presses
+wake-on-lan = "0.2.0"                           #   Waking powered-off hardware
+warp = "0.3"                                    #   HTTP response status codes
